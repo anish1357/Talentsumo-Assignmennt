@@ -31,7 +31,7 @@ import logo from './handsphoto.jpg';
 
     },[seconds,minutes,disable]);
    return (
-    <Card sx={{ maxWidth: "90%"}} variant="outlined" raised={true}>
+    <Card sx={{ maxWidth: "100%", boxShadow: 3,marginBottom:"2%"}} variant="outlined" raised={true}>
         
         <CardContent sx={{ maxWidth : "100%" }}>
             <CardMedia  component="img" image={logo}/>
@@ -55,7 +55,7 @@ import logo from './handsphoto.jpg';
             <Typography variant="subtitle2">Available in {minutes < 10 ?  "0" +minutes : minutes} : {seconds< 10 ?  "0" +seconds : seconds} seconds</Typography> 
       </CardContent>
       <CardActions sx={{justifyContent:"center"}}>
-        <CustomButton name={"Veiw Your Response & Answers"}  borderRadius={"8px"} disabled={disable}/>
+        <CustomButton name={"View Your Response & Answers"}  borderRadius={"8px"} disabled={disable}/>
       </CardActions>
     </Card>
     );

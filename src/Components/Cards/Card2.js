@@ -8,7 +8,7 @@ import logo from './avatar.png';
    
    
    return (
-    <Card sx={{ maxWidth: "90%"}} variant="outlined" raised={true}>
+    <Card sx={{ maxWidth: "100%", boxShadow: 3,marginBottom:"2%" }} variant="outlined" raised={true}>
         <CardHeader sx={{color: 'white', backgroundColor: 'black'}} title= {`Congratulations ${props.name},you are a explorer`} titleTypographyProps={{variant:'subtitle1' }}/>
         <CardContent sx={{display: "flex", maxWidth : "100%" }}>
         <CardMedia component="img" sx={{ width: 180 }} image= {logo}/>
