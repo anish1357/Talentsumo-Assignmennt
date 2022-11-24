@@ -23,8 +23,8 @@ import logo from './avatar.png';
         </Box>
       </CardContent>
       <CardActions>
-        <CustomButton name={"Download Card!"} color={"white"} backgroundColor={"black"} borderRadius={"0px"}/>
-        <CustomButton name={"Share on Social Media"} color={"white"} backgroundColor={"black"} borderRadius={"0px"}/>
+        <CustomButton name={"Download Card!"} color={"white"} backgroundColor={"black"} borderRadius={"0px"} fullWidth={true}/>
+        <CustomButton name={"Share on Social Media"} color={"white"} backgroundColor={"black"} borderRadius={"0px"} fullWidth={true}/>
       </CardActions>
     </Card>
     );
