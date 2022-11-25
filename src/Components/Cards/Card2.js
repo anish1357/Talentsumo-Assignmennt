@@ -1,12 +1,21 @@
-import {React,useRef} from "react"
+import {React,useRef,useState} from "react"
 import {Card,CardHeader,CardContent,CardActions,CardMedia,Box} from "@mui/material" 
 import Typography from "@mui/material/Typography"
 import CustomButton from "../Button/CustomButton"
 import exportAsImage from "../export"
+import SocialShareDialog from "../SocialShareDialog"
 // import image from "./147142.png"
 import logo from './avatar.png';
   const CustomCard2 = (props) =>  {
+    const [open, setOpen] = useState(false);
     const exportRef = useRef();
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
    
    return (
     <Card sx={{ maxWidth: "100%", boxShadow: 3,marginBottom:"2%" }} variant="outlined" raised={true}>
@@ -25,9 +34,10 @@ import logo from './avatar.png';
         </Box>
       </CardContent>
       </div>
+      <SocialShareDialog open={open} onClose={handleClose}/>
       <CardActions>
         <CustomButton onClick = {()=>exportAsImage(exportRef.current, "Card")} name={"Download Card!"} color={"white"} backgroundColor={"black"} borderRadius={"0px"} fullWidth={true}/>
-        <CustomButton name={"Share on Social Media"} color={"white"} backgroundColor={"black"} borderRadius={"0px"} fullWidth={true}/>
+        <CustomButton onClick ={handleClickOpen} name={"Share on Social Media"} color={"white"} backgroundColor={"black"} borderRadius={"0px"} fullWidth={true}/>
       </CardActions>
     </Card>
     );
