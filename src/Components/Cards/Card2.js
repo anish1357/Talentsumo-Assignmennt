@@ -26,7 +26,7 @@ import logo from './avatar.png';
         <Box sx={{ display: 'flex', flexDirection: 'column' ,alignItems:"center",justifyContent: 'center',}}>
 
         
-        <Typography variant="body2" color="text.secondary" >
+        <Typography variant="subtitle2"  color="text.secondary" sx={{marginLeft:"5%",color:"black"}}>
         Congratulations, you displayed an Explorer personality type! They tend to have an open mindset.
          They are open-minded about new things, open to opportunities, but approach everything in life without judgement. 
          Their positivity helps to uncover new opportunities and possibilities in the future. 
@@ -34,6 +34,7 @@ import logo from './avatar.png';
         </Box>
       </CardContent>
       </div>
+      <hr/>
       <SocialShareDialog open={open} onClose={handleClose}/>
       <CardActions>
         <CustomButton onClick = {()=>exportAsImage(exportRef.current, "Card")} name={"Download Card!"} color={"white"} backgroundColor={"black"} borderRadius={"0px"} fullWidth={true}/>

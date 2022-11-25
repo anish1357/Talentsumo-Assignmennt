@@ -9,7 +9,7 @@ import CustomButton from "../Button/CustomButton"
    },[stars]);
    console.log(stars)
    return (
-    <Card sx={{ maxWidth: "100%", boxShadow: 3 ,marginBottom:"2%"}} variant="outlined" raised={true}>
+    <Card sx={{ maxWidth: "100%", boxShadow: 3 ,marginBottom:"1%"}} variant="outlined" raised={true}>
         
       <CardContent sx={{ maxWidth : "100%" }}>
       <Typography variant="subtitle1" sx={{fontWeight:"bold"}}>
@@ -19,15 +19,18 @@ import CustomButton from "../Button/CustomButton"
         name="simple-controlled"
         size={"large"}
         value={stars}
-         
+         sx={{"&.MuiRating-iconEmpty":{
+             backgroundColor:"rgba(90,90,90,0.8)"
+         }}}
         onChange={(event, newValue) => {
           setStars(newValue);
         }}
       />
       <Typography variant="subtitle1" sx={{fontWeight:"bold"}}>
-        Anything else you want to tell us
+        Anything else you want to tell us ?
       </Typography>
-      <TextareaAutosize aria-label="minimum height" minRows={5} placeholder="Please write your feedback here..." style={{ width: "80%",borderColor: "rgba(90, 90, 90,0.3)"}}/>  
+      <TextareaAutosize aria-label="minimum height" minRows={5} placeholder="Please write your feedback here..." 
+        style={{ width: "80%",borderColor: "rgba(90, 90, 90,0.3)",fontFamily:"Roboto",fontSize:"1rem"}}/>  
       </CardContent>
       <CardActions sx={{justifyContent:"center"}}>
         <CustomButton name={"Share your feedback"}  borderRadius={"8px"}  />

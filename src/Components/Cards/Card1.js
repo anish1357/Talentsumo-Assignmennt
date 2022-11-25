@@ -41,7 +41,8 @@ import logo from './handsphoto.jpg';
             <Typography variant="subtitle2">
                  This will now be analyzed by our Al models (and coaches/HR managers, if applicable). 
                  You or your administrator will receive a detailed feedback on the same within next 72 hours.
-              </Typography>   
+              </Typography> 
+              <hr />  
               <br/> 
               <Typography variant="subtitle2">
                  Every human interaction is an opportunity to learn. Its also an opportunity to demonstrate your
