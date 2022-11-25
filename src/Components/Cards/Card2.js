@@ -1,14 +1,16 @@
-import React from "react"
+import {React,useRef} from "react"
 import {Card,CardHeader,CardContent,CardActions,CardMedia,Box} from "@mui/material" 
 import Typography from "@mui/material/Typography"
 import CustomButton from "../Button/CustomButton"
+import exportAsImage from "../export"
 // import image from "./147142.png"
 import logo from './avatar.png';
   const CustomCard2 = (props) =>  {
-   
+    const exportRef = useRef();
    
    return (
     <Card sx={{ maxWidth: "100%", boxShadow: 3,marginBottom:"2%" }} variant="outlined" raised={true}>
+        <div ref={exportRef}>
         <CardHeader sx={{color: 'white', backgroundColor: 'black'}} title= {`Congratulations ${props.name},you are a explorer`} titleTypographyProps={{variant:'subtitle1' }}/>
         <CardContent sx={{display: "flex", maxWidth : "100%" }}>
         <CardMedia component="img" sx={{ width: 180 }} image= {logo}/>
@@ -22,8 +24,9 @@ import logo from './avatar.png';
         </Typography>
         </Box>
       </CardContent>
+      </div>
       <CardActions>
-        <CustomButton name={"Download Card!"} color={"white"} backgroundColor={"black"} borderRadius={"0px"} fullWidth={true}/>
+        <CustomButton onClick = {()=>exportAsImage(exportRef.current, "Card")} name={"Download Card!"} color={"white"} backgroundColor={"black"} borderRadius={"0px"} fullWidth={true}/>
         <CustomButton name={"Share on Social Media"} color={"white"} backgroundColor={"black"} borderRadius={"0px"} fullWidth={true}/>
       </CardActions>
     </Card>

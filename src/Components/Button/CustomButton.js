@@ -1,13 +1,13 @@
 import React from "react"
 import {Button, formGroupClasses} from "@mui/material" 
 import Typography from "@mui/material/Typography"
-const CustomButton = (props) => {
+const CustomButton = ({fullWidth,disabled,color,backgroundColor,name,borderRadius,onClick}) => {
    
    
    return (
-      <Button fullWidth={props.fullWidth ? true : false} disabled={props.disabled ? true :  false} variant={"contained"} sx={{ color: `${props.color}`, backgroundColor: `${props.backgroundColor}`,textTransform: 'none', borderRadius : `${props.borderRadius}`}}>
+      <Button onClick={onClick} fullWidth={fullWidth ? true : false} disabled={disabled ? true :  false} variant={"contained"} sx={{ color: `${color}`, backgroundColor: `${backgroundColor}`,textTransform: 'none', borderRadius : `${borderRadius}`}}>
        <Typography variant="subtitle2" >
-       {props.name}
+       {name}
        </Typography>
       </Button>
 );
