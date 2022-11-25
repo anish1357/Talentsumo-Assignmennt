@@ -54,7 +54,7 @@ import logo from './handsphoto.jpg';
                   specific feedback makes improvement faster. 
             </Typography>
       <CardActions sx={{justifyContent:"center"}}>
-        <CustomButton name={"View Your Response & Answers"}  borderRadius={"8px"} disabled={disable}/>
+        <CustomButton name={"View Your Response & Answers"} onClick={()=>{alert("You will be redirected to Response Page")}} borderRadius={"8px"} disabled={disable}/>
       </CardActions>
             <Typography variant="subtitle2">Available in {minutes < 10 ?  "0" +minutes : minutes} : {seconds< 10 ?  "0" +seconds : seconds} seconds</Typography> 
       </CardContent>
