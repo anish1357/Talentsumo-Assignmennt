@@ -62,6 +62,8 @@ const CustomCard3 = (props) => {
             alert(
               `Implement HandleSubmit ! Rating :${stars} Feedback :${text}`
             );
+            var obj = {'Rating': stars,'Feedback':text}
+            localStorage.setItem( 'obj', JSON.stringify(obj));
           }}
           borderRadius={"8px"}
         />
