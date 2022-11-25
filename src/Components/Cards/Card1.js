@@ -52,11 +52,11 @@ import logo from './handsphoto.jpg';
                   matter - but they all have a common point of view. Practice is the key to improvement - and 
                   specific feedback makes improvement faster. 
             </Typography>
-            <Typography variant="subtitle2">Available in {minutes < 10 ?  "0" +minutes : minutes} : {seconds< 10 ?  "0" +seconds : seconds} seconds</Typography> 
-      </CardContent>
       <CardActions sx={{justifyContent:"center"}}>
         <CustomButton name={"View Your Response & Answers"}  borderRadius={"8px"} disabled={disable}/>
       </CardActions>
+            <Typography variant="subtitle2">Available in {minutes < 10 ?  "0" +minutes : minutes} : {seconds< 10 ?  "0" +seconds : seconds} seconds</Typography> 
+      </CardContent>
     </Card>
     );
 }

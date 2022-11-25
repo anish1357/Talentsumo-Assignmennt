@@ -17,7 +17,9 @@ import CustomButton from "../Button/CustomButton"
       </Typography>  
       <Rating
         name="simple-controlled"
+        size={"large"}
         value={stars}
+         
         onChange={(event, newValue) => {
           setStars(newValue);
         }}
@@ -25,11 +27,10 @@ import CustomButton from "../Button/CustomButton"
       <Typography variant="subtitle1" sx={{fontWeight:"bold"}}>
         Anything else you want to tell us
       </Typography>
-      <TextareaAutosize aria-label="minimum height"  minRows={5} placeholder="Please write your feedback here..." style={{ width: "80%" }}
-/>  
+      <TextareaAutosize aria-label="minimum height" minRows={5} placeholder="Please write your feedback here..." style={{ width: "80%",borderColor: "rgba(90, 90, 90,0.3)"}}/>  
       </CardContent>
       <CardActions sx={{justifyContent:"center"}}>
-        <CustomButton name={"Share your feedback"}  borderRadius={"8px"} />
+        <CustomButton name={"Share your feedback"}  borderRadius={"8px"}  />
       </CardActions>
     </Card>
     );
